@@ -1,0 +1,79 @@
+.header {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    margin-right: 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: solid 2px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: gray;
+}
+
+.red {
+    background-color: red;
+}
+
+#figure-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.figure {
+    width: 49px;
+    height: 49px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    cursor: pointer;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.clear-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/*
+tr:first-child td:nth-last-child(-n+2),
+tr:last-child td:nth-last-child(-n+2) {
+    visibility: hidden;
+    border-color: white;
+}
+*/
+
