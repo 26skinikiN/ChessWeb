@@ -1,0 +1,119 @@
+.header {
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    margin-right: 20px;
+}
+
+/* Таблица шахматной доски */
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: solid 2px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative; /* Для псевдоэлементов */
+    margin-bottom: 10px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: gray;
+}
+
+/* Нумерация строк слева */
+tr:nth-child(1) td:first-child::before { content: "8"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+tr:nth-child(2) td:first-child::before { content: "7"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+tr:nth-child(3) td:first-child::before { content: "6"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+tr:nth-child(4) td:first-child::before { content: "5"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+tr:nth-child(5) td:first-child::before { content: "4"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+tr:nth-child(6) td:first-child::before { content: "3"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+tr:nth-child(7) td:first-child::before { content: "2"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+tr:nth-child(8) td:first-child::before { content: "1"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); }
+
+/* Нумерация строк справа (перевернуть цифры) */
+tr:nth-child(1) td:last-child::after { content: "8"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+tr:nth-child(2) td:last-child::after { content: "7"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+tr:nth-child(3) td:last-child::after { content: "6"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+tr:nth-child(4) td:last-child::after { content: "5"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+tr:nth-child(5) td:last-child::after { content: "4"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+tr:nth-child(6) td:last-child::after { content: "3"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+tr:nth-child(7) td:last-child::after { content: "2"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+tr:nth-child(8) td:last-child::after { content: "1"; position: absolute; right: -30px; top: 50%; transform: translateY(-50%) rotate(180deg); }
+
+/* Буквы сверху (перевернуть буквы) */
+tr:first-child td:nth-child(1)::before { content: "a"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+tr:first-child td:nth-child(2)::before { content: "b"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+tr:first-child td:nth-child(3)::before { content: "c"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+tr:first-child td:nth-child(4)::before { content: "d"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+tr:first-child td:nth-child(5)::before { content: "e"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+tr:first-child td:nth-child(6)::before { content: "f"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+tr:first-child td:nth-child(7)::before { content: "g"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+tr:first-child td:nth-child(8)::before { content: "h"; position: absolute; top: -35px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+
+/* Буквы снизу */
+tr:last-child td:nth-child(1)::after { content: "a"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+tr:last-child td:nth-child(2)::after { content: "b"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+tr:last-child td:nth-child(3)::after { content: "c"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+tr:last-child td:nth-child(4)::after { content: "d"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+tr:last-child td:nth-child(5)::after { content: "e"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+tr:last-child td:nth-child(6)::after { content: "f"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+tr:last-child td:nth-child(7)::after { content: "g"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+tr:last-child td:nth-child(8)::after { content: "h"; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); }
+
+
+.red {
+    background-color: red;
+}
+
+#figure-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.figure {
+    width: 49px;
+    height: 49px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    cursor: pointer;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-button-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.clear-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
